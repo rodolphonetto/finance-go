@@ -1,14 +1,11 @@
 package validation
 
 import (
-	"fmt"
-
 	"github.com/asaskevich/govalidator"
 	"testes.com/packages/types"
 )
 
-func ValidateData(data *types.Pessoa) (map[string]string, bool) {
-	fmt.Println(data)
+func ValidateData(data *types.Category) (map[string]string, bool) {
 	result, err := govalidator.ValidateStruct(data)
 	if err != nil {
 		errors := govalidator.ErrorsByField(err)
